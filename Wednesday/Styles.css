@@ -1,4 +1,13 @@
+
 h1 {
     font-size: 30px;
     color: rgb(0, 0, 0)
+  }
+  p{
+    font-size: 36px;
+    font-family:Verdana;
+  } 
+
+body{
+    background-color:rgb(9, 255, 0)
   }
