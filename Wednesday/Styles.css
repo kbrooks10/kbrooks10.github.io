@@ -1,7 +1,7 @@
-
 html,
 body,
 header,
+link,index.html  
 .view {
   height: 100%;
 }
@@ -41,4 +41,6 @@ h5 {
   border-top: 3px solid #fff;
   width: 80px;
 }
+
+
 
