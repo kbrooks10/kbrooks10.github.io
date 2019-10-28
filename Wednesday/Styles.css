@@ -31,7 +31,6 @@ p {
   background-color: transparent;
   border-color: white;
   margin-bottom: 5px;
-  nav-right: auto;
 }
 .btn-primary:hover {
   color: #27a967;
@@ -69,4 +68,15 @@ p {
 }
 .glyphicon-large {
   font-size: 100px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
 }
