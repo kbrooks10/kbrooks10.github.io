@@ -31,6 +31,7 @@ p {
   background-color: transparent;
   border-color: white;
   margin-bottom: 5px;
+  nav-right: auto;
 }
 .btn-primary:hover {
   color: #27a967;
@@ -52,7 +53,6 @@ p {
   background: #6f7c94;
   border-radius: 0;
   border: 0;
-  right: 0;
 }
 .dropdown-menu li a {
   padding: 10px;
