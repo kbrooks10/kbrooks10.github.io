@@ -4,6 +4,7 @@
 }
 .dropdown{
   margin-top: 10px;
+  float: right;
 }
 body {
   background: #3e4649;
