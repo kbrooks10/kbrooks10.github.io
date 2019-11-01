@@ -1,6 +1,21 @@
 .jumbotron{
-    background-color: darkgreen;
+    background-color: rgba(0, 163, 0, 0.568);
 }
 .col-md-4{
-    background-color: darkgreen;
+    background-color: rgba(0, 163, 0, 0.568);
+    margin-left: auto;
+    margin-right: auto;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0, 163, 0, 0.568);
+  }
+  .btn-primary { background-color: rgb(46, 40, 40); }
+
+  .btn-primary:hover { background-color:rgba(0, 163, 0, 0.568); }
+  
+  .text-primary{background-color: rgb(46, 40, 40);}
+
+  .container .margin-left {fill: rgb(46, 40, 40) ;}
+
+  .container .margin-left {fill: rgb(46, 40, 40) ;}
+
