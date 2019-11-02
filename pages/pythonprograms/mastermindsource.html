@@ -1,0 +1,42 @@
+import random
+
+red = "red"
+white = "white"
+blue = "blue"
+green = "green"
+
+possible_colors = [red,white,blue,green]
+computer_colors = []
+
+def computer_color_picker():
+  for i in range(0,4):
+    possible_random_colors = possible_colors[random.randint(0,3)]
+    computer_colors.append(possible_random_colors)
+
+computer_color_picker()
+
+while True:
+  user_choices = []
+  matches = []
+
+  for i in range(0,4):
+    print('Choose a color from red, white, green, or blue:')
+    color_choice = str(input())
+    user_choices.append(color_choice)
+
+  for i in range(0,4):
+    computer_test = computer_colors[i]
+    test = all(item in computer_colors for item in user_choices)
+
+    if computer_colors[i] == user_choices[i]:
+      matches.append("C")
+ 
+    elif test == True: 
+      matches.append("B")
+
+  if user_choices == computer_colors:
+    print('congratulations! you have won.')
+    break
+  elif user_choices is not computer_colors:
+    print(matches)
+
