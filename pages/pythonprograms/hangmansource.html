@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    from random import choice
+
+    def read_words():
+      """
+      Read a text file of words
+      Return a list of those words
+      """
+      files1 = open("wordlist.txt")
+      words = files1.read().splitlines()
+      return words
+    
+    
+    def choose_word(word_list, min_len=4):
+      word = choice(word_list)
+      
+      while len(word) < min_len:
+          word = choice(word_list)
+    
+      return word
+    
+    
+    def main():
+      words = read_words()
+      word = choose_word(words)
+      attempts = 6
+      letters_guessed = []
+      guesses = False
+    
+      print("The word contains", len(word), "letters.")
+      print(len(word) * " _ ")
+      while guesses == False and attempts > 0:
+        print("You have " + str(attempts) + " attempts left.")
+        attempt = input("Please guess a letter or make an attempt at the full word: ")
+        #Player only enters a single letter
+        if len(attempt) == 1:
+          if attempt not in words:
+            print("Please try again.")
+          elif attempt in letters_guessed:
+            print("That letter has already been inputted. Please try again.")
+          elif attempt not in word:
+            print("The letter that was inputted is not applicable to the word. Please try again.")
+            letters_guessed.append(attempt)
+            attempts -= 1
+          elif attempt in word:
+            print("Attempt correct!")
+            letters_guessed.append(attempt)
+          else:
+            print("Error!")
+    
+        #Player attempts at guessing the full word
+        elif len(attempt) == len(word):
+          if attempt == word:
+            print("Congratulations! that is the correct word.")
+            guesses = True
+          else:
+            print("That is not the correct word. Please try again.")
+            attempts -= 1
+    
+    
+        #Player enters the wrong number of characters for the word that is being guessed
+        else:
+          print("The number of characters entered does not match the lenght of the word. Please try again.")
+        current = ""
+        if guesses == False:
+          for letter in word:
+            if letter in letters_guessed:
+              current += letter
+            else:
+                current += " _ "
+            print(current)
+          if current == word:
+            print("Congratulations! that is the correct word.")
+            guesses = True
+          elif attempts == 0:
+            print("You are out of attempts and have failed to guess the word. You lose!")
+            print("The correct word was " + (word))
+    
+    #At the end of the round ask wether the user would like to play again
+      def restart_game():
+        users_decision = input("Would you like to start another game? Yes or No?")
+        if users_decision == "Yes" or "yes" or "y" or "Y":
+          main()
+        else:
+          pass
+    
+    
+    
+      restart_game()
+    
+    if __name__ == "__main__":
+        main()
+    
+</body>
+</html>
+
+

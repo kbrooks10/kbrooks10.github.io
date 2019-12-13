@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    def main():
+    decimal = int(input("Please enter the decimal you wish to convert: \n"))
+    conversion = (input("Do you wish to convert to Binary[1], Octal[2], or Hexadecimal[3]? \n"))
+  
+  
+    if conversion == "1":
+      print("The value converted to binary is: \n", bin(decimal))
+    elif conversion == "2":
+      print("The value converted to octal is: \n",oct(decimal))
+    elif conversion == "3":
+      print("The value converted to hexadecimal is: \n",hex(decimal))
+    else: 
+      print("Please try again.")
+  
+  def restart_converter():
+    users_decision = input("Would you like to start a conversion?")
+    if users_decision == "Yes" or "yes" or "y" or "Y":
+      main()
+    else:
+      pass
+  
+  
+  restart_converter()
+  
+  if __name__ == "__main__":
+      main()
+  
+    
+</body>
+</html>
+
+
